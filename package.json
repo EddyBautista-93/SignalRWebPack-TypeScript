@@ -5,7 +5,9 @@
   "description": ".NET Core web application using a TypeScript Client",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "Webpack --mode=development --watch",
+    "release": "wepack --node=production",
+    "publish": "npm run release && dotnet publish -c release"
   },
   "repository": {
     "type": "git",
